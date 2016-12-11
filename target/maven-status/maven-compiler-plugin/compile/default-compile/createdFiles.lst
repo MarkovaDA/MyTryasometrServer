@@ -2,4 +2,6 @@ com/mycompany/task/config/MyBatisConfig.class
 com/mycompany/task/config/SpringWebMVCConfig.class
 com/mycompany/task/config/SpringInitializer.class
 com/mycompany/task/controller/MainController.class
+com/mycompany/task/model/Location.class
+com/mycompany/task/model/Acceleration.class
 com/mycompany/task/mapper/BusVehicleMapper.class

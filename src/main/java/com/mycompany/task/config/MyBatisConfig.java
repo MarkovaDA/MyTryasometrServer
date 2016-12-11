@@ -13,10 +13,10 @@ public class MyBatisConfig {
     public BasicDataSource dataSource() {
             BasicDataSource dataSource = new BasicDataSource();
             dataSource.setDriverClassName("com.mysql.jdbc.Driver");           
-            dataSource.setUsername("root");
+            dataSource.setUsername("dasha");
             //"jdbc:mysql://vps2.vistar.su:3306"
-            dataSource.setUrl("jdbc:mysql://localhost:3306/tryasometr_v2");
-            dataSource.setPassword("");
+            dataSource.setUrl("jdbc:mysql://vps1.vistar.su:3306/tryasometr_v2");
+            dataSource.setPassword("dasha");
             return dataSource;
     }
     @Bean

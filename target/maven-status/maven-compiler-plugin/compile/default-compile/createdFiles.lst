@@ -4,4 +4,5 @@ com/mycompany/task/config/SpringInitializer.class
 com/mycompany/task/controller/MainController.class
 com/mycompany/task/mapper/SensorDataMapper.class
 com/mycompany/task/model/Location.class
+com/mycompany/task/model/ResponseEntity.class
 com/mycompany/task/model/Acceleration.class

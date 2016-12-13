@@ -4,17 +4,22 @@ package com.mycompany.task.controller;
 import com.mycompany.task.mapper.SensorDataMapper;
 import com.mycompany.task.model.Acceleration;
 import com.mycompany.task.model.Location;
+import com.mycompany.task.model.ResponseEntity;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import java.util.HashMap;
+import java.util.Map;
+import org.springframework.web.bind.annotation.GetMapping;
 
 
 
@@ -33,13 +38,25 @@ public class MainController {
     
     @PostMapping(value="/save_location/")
     @ResponseBody
-    public String saveLocations(@RequestBody List<Location> list){
-        return "success";
+    public  ResponseEntity saveLocations(@RequestBody List<Location> list){
+        ResponseEntity entity = new ResponseEntity();
+        entity.setStatus("OK");
+        return entity;
+    }
+    
+    @GetMapping(value="/save_location_test/")
+    @ResponseBody
+    public  ResponseEntity saveLocationsTest(){
+        ResponseEntity entity = new ResponseEntity();
+        entity.setStatus("OK");
+        return entity;
     }
     
     @PostMapping(value="/save_acceleration/")
     @ResponseBody
-    public String saveAccelerations(@RequestBody List<Acceleration> list){
-        return "success";
+    public ResponseEntity saveAccelerations(@RequestBody List<Acceleration> list){
+        ResponseEntity entity = new ResponseEntity();
+        entity.setStatus("OK");
+        return entity;
     }
 }

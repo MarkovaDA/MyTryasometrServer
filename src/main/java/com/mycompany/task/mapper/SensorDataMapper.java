@@ -11,10 +11,10 @@ public interface SensorDataMapper {
     
     void insertLocations(List<Location> list);
     
-    @Insert("insert into tryasometr.v2.current_locations values(#{lon},#{lat},#{deviceImei},#{dateTime})")
+    @Insert("insert into tryasometr_v2.current_locations (lon,lat,deviceImei,dateTime) values(#{lon},#{lat},#{deviceImei},#{dataTime})")
     void insertLocation(Location location);
     
-    @Insert("insert into tryasometr.v2.current_accelerations values(#{accelX},#{accelY},#{accelZ},#{deviceImei},#{dateTime})")
+    @Insert("insert into tryasometr_v2.current_accelerations values(#{accelX},#{accelY},#{accelZ},#{deviceImei},#{dataTime})")
     void insertAcceleration(Acceleration acceleration);
        
 }

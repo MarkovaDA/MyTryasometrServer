@@ -28,7 +28,8 @@ public class MyBatisConfig {
     public SqlSessionFactoryBean sqlSessionFactory() throws Exception {
             SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
             sessionFactory.setDataSource(dataSource());
+            
             return sessionFactory;
     }
-    
+   
 }

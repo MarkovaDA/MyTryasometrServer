@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.mycompany.task.mapper">
+<mapper namespace="com.mycompany.task.mapper.SensorDataMapper">
     <insert id="insertLocations" parameterType="java.util.List">
-        insert into tryasometr.v2.current_locations(lon,lat,deviceImei,dateTime) values
+        insert into tryasometr_v2.current_locations (lon,lat,deviceImei,dateTime) values
         <foreach item="location" collection="list"  separator=",">
-          (#{location.lon},#{location.lat},#{location.deviceImei},#{location.dateTime})
+          (#{location.lon},#{location.lat},#{location.deviceImei},#{location.dataTime})
         </foreach> 
     </insert>
 </mapper>

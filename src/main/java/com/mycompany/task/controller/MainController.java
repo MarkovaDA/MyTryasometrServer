@@ -35,6 +35,8 @@ public class MainController {
     @PostMapping(value="/save_location/")
     @ResponseBody
     public  ResponseEntity saveLocations(@RequestBody List<Location> list){
+        //sensorMapper.insertLocation(list.get(0));//сейчас сохраняются одинаковые данные, потому что список не меняется
+        sensorMapper.insertLocations(list);
         ResponseEntity entity = new ResponseEntity();
         entity.setStatus("OK");
         return entity;

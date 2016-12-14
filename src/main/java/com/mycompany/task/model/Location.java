@@ -1,15 +1,13 @@
 
 package com.mycompany.task.model;
 
-import java.util.Date;
-
 
 public class Location {
     private Long id;
     private Double lon;
     private Double lat;
     private String deviceImei;
-    private Date dateTime;
+    private String dataTime;
 
     public Long getId() {
         return id;
@@ -43,12 +41,12 @@ public class Location {
         this.deviceImei = deviceImei;
     }
 
-    public Date getDateTime() {
-        return dateTime;
+    public String getDataTime() {
+        return dataTime;
     }
 
-    public void setDateTime(Date dateTime) {
-        this.dateTime = dateTime;
+    public void setDataTime(String dataTime) {
+        this.dataTime = dataTime;
     }
     
 }

@@ -1,24 +1,15 @@
 package com.mycompany.task.model;
 
-import java.util.Date;
 
 
 public class Acceleration {
-    private Long id;
     private Float accelX;
     private Float accelY;
     private Float accelZ;
     private String deviceImei;
-    private Date dateTime;
+    private String dataTime;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
+   
     public Float getAccelX() {
         return accelX;
     }
@@ -51,12 +42,11 @@ public class Acceleration {
         this.deviceImei = deviceImei;
     }
 
-    public Date getDateTime() {
-        return dateTime;
+    public String getDataTime() {
+        return dataTime;
     }
 
-    public void setDateTime(Date dateTime) {
-        this.dateTime = dateTime;
-    }
-    
+    public void setDataTime(String dataTime) {
+        this.dataTime = dataTime;
+    } 
 }

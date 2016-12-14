@@ -15,11 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import java.util.HashMap;
-import java.util.Map;
-import org.springframework.web.bind.annotation.GetMapping;
+
 
 
 
@@ -43,15 +39,7 @@ public class MainController {
         entity.setStatus("OK");
         return entity;
     }
-    
-    @GetMapping(value="/save_location_test/")
-    @ResponseBody
-    public  ResponseEntity saveLocationsTest(){
-        ResponseEntity entity = new ResponseEntity();
-        entity.setStatus("OK");
-        return entity;
-    }
-    
+        
     @PostMapping(value="/save_acceleration/")
     @ResponseBody
     public ResponseEntity saveAccelerations(@RequestBody List<Acceleration> list){

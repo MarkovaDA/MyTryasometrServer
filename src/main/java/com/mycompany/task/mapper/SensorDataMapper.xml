@@ -7,4 +7,8 @@
           (#{location.lon},#{location.lat},#{location.deviceImei},#{location.dataTime})
         </foreach> 
     </insert>
+    
+    <select id = "getAllLocationsTest" resultType="com.mycompany.task.model.Location">
+        select * from  tryasometr_v2.current_locations limit 1;
+    </select>
 </mapper>

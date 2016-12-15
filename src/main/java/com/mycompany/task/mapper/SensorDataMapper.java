@@ -5,12 +5,15 @@ import com.mycompany.task.model.Acceleration;
 import com.mycompany.task.model.Location;
 import java.util.List;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.InsertProvider;
+import org.apache.ibatis.annotations.Param;
 
 
 public interface SensorDataMapper {
     
-    void insertLocations(List<Location> list);
-    
+    @InsertProvider(type = SensorDataProvider.class, method="insertListOfLocations")
+    void insertListOfLocations(@Param("list")List<Location> list);
+
     @Insert("insert into tryasometr_v2.current_locations (lon,lat,deviceImei,dateTime) values(#{lon},#{lat},#{deviceImei},#{dataTime})")
     void insertLocation(Location location);
     

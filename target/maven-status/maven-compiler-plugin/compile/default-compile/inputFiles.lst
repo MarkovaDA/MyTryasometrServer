@@ -4,5 +4,6 @@
 /home/darya/NetBeansProjects/tryasometr_server/src/main/java/com/mycompany/task/model/ResponseEntity.java
 /home/darya/NetBeansProjects/tryasometr_server/src/main/java/com/mycompany/task/config/MyBatisConfig.java
 /home/darya/NetBeansProjects/tryasometr_server/src/main/java/com/mycompany/task/model/Acceleration.java
+/home/darya/NetBeansProjects/tryasometr_server/src/main/java/com/mycompany/task/mapper/SensorDataProvider.java
 /home/darya/NetBeansProjects/tryasometr_server/src/main/java/com/mycompany/task/model/Location.java
 /home/darya/NetBeansProjects/tryasometr_server/src/main/java/com/mycompany/task/controller/MainController.java

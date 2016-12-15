@@ -1,3 +1,4 @@
+com/mycompany/task/mapper/SensorDataProvider.class
 com/mycompany/task/config/MyBatisConfig.class
 com/mycompany/task/config/SpringWebMVCConfig.class
 com/mycompany/task/config/SpringInitializer.class

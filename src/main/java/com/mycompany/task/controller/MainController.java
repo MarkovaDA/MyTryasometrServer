@@ -9,6 +9,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,9 +35,8 @@ public class MainController {
     
     @PostMapping(value="/save_location/")
     @ResponseBody
-    public  ResponseEntity saveLocations(@RequestBody List<Location> list){
-        //sensorMapper.insertLocation(list.get(0));//сейчас сохраняются одинаковые данные, потому что список не меняется
-        sensorMapper.insertLocations(list);
+    public  ResponseEntity saveLocations(@RequestBody List<Location> list){      
+        sensorMapper.insertListOfLocations(list);
         ResponseEntity entity = new ResponseEntity();
         entity.setStatus("OK");
         return entity;
